@@ -1,0 +1,91 @@
+# --- Next.js Build & Production ---
+.next/
+out/
+build/
+.turbo/
+
+# --- Dependencies ---
+node_modules/
+jspm_packages/
+
+# --- Environment Variables (CRITICAL: DO NOT REMOVE) ---
+# This prevents your Stripe, OpenAI, and Clerk keys from leaking.
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.env.local
+*.env
+
+# --- IDE & Editor Specific ---
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# --- Deployment & OS Files ---
+.vercel/
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+desktop.ini
+
+# --- Automated/Hidden Folders ---
+.adal/
+.cache/
+.npm
+.eslintcache
+
+# --- Logs & Debugging ---
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+logs
+*.log
+
+# --- Testing ---
+/coverage
+.nyc_output
+
+# --- TypeScript ---
+*.tsbuildinfo
+next-env.d.ts
+
+
+# --- AI Agents, Extensions & Copilots ---
+.adal/
+.agent/
+.agents/
+.augment/
+.claude/
+.codebuddy/
+.commandcode/
+.continue/
+.cortex/
+.crush/
+.factory/
+.goose/
+.iflow/
+.junie/
+.kilocode/
+.kiro/
+.kode/
+.mcpjam/
+.mux/
+.neovate/
+.openhands/
+.pi/
+.pochi/
+.qoder/
+.qwen/
+.roo/
+.trae/
+.vibe/
+.windsurf/
+.zencoder/
