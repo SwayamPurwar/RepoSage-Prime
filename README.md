@@ -1,4 +1,4 @@
-# RespoSage Prime — AI-Powered Codebase Analyzer
+# RepoSage Prime — AI-Powered Codebase Analyzer
 
 <p align="center">
   <img src="https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js" alt="Next.js 15" />
@@ -20,7 +20,7 @@
   <a href="">
     <img src="https://img.shields.io/badge/Live_Demo-Visit_App-blue?style=for-the-button&logo=vercel" alt="Live Demo" />
   </a>
-  <a href="https://github.com/swayampurwar/CodeSense-AI">
+  <a href="https://github.com/swayampurwar/RepoSage-Prime">
     <img src="https://img.shields.io/badge/GitHub-Source_Code-black?style=for-the-button&logo=github" alt="GitHub" />
   </a>
 </p>
@@ -61,7 +61,7 @@
 ## 📁 Project Structure
 
 ```text
-codesenseai/
+reposageprime/
 ├── app/
 │   ├── (auth)/              # Clerk sign-in/sign-up
 │   ├── (pages)/             # Public landing and info pages
@@ -100,7 +100,7 @@ codesenseai/
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/SwayamPurwar/RepoSage-Prime.git
-   cd CodeSense-AI
+   cd RepoSage-Prime
    ```
 
 2. **Install dependencies:**
