@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #080809;
+  --bg-elevated: #121216;
+  --surface: #17171c;
+  --surface-soft: rgba(255, 255, 255, 0.04);
+  --border: rgba(255, 255, 255, 0.14);
+  --border-soft: rgba(255, 255, 255, 0.08);
+  --foreground: #f5f2ec;
+  --muted: #b3ab9c;
+  --muted-strong: #d6cebf;
+  --gold: #d7b47f;
+  --gold-soft: #f2ddbd;
+  --ink: #0d0d0f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body), sans-serif;
+  color: var(--foreground);
+  background:
+    radial-gradient(circle at 10% 5%, rgba(215, 180, 127, 0.12), transparent 34%),
+    radial-gradient(circle at 90% 0%, rgba(255, 255, 255, 0.05), transparent 25%),
+    linear-gradient(140deg, #070708 0%, #0f0f13 35%, #121217 65%, #0a0a0e 100%);
+  background-attachment: fixed;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.25;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 52px 52px;
+}
+
+.bg-app {
+  min-height: 100vh;
+}
+
+.font-display {
+  font-family: var(--font-display), serif;
+}
+
+.font-mono {
+  font-family: var(--font-mono), monospace;
+}
+
+.text-foreground {
+  color: var(--foreground);
+}
+
+.text-muted {
+  color: var(--muted);
+}
+
+.glass {
+  border: 1px solid var(--border-soft);
+  background: linear-gradient(155deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.02));
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+}
+
+.gold-line {
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -12px, 0);
+  }
+}
+
+.drift {
+  animation: drift 8s ease-in-out infinite;
+}
