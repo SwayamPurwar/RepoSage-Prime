@@ -42,8 +42,8 @@ export default function RootLayout({
         }
       }}
     >
-      <html lang="en">
-        <body className={`${cormorant.variable} ${manrope.variable} ${jetbrainsMono.variable} font-body bg-[#0A0A0A] text-[#f5f2ec] antialiased`}>
+      <html lang="en" suppressHydrationWarning>
+        <body className={`${cormorant.variable} ${manrope.variable} ${jetbrainsMono.variable} font-body bg-[#0A0A0A] text-[#f5f2ec] antialiased`} suppressHydrationWarning>
           {children}
           
           {/* NEW: Global Toast Provider themed to match your app */}
