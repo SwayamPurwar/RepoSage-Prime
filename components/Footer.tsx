@@ -52,7 +52,7 @@ export default function Footer() {
             <Link href="/method" className="text-sm text-[#b3ab9c] hover:text-[#f5f2ec] transition">
               Delivery Method
             </Link>
-            <Link href="#" className="text-sm text-[#b3ab9c] hover:text-[#f5f2ec] transition">
+            <Link href="/pricing" className="text-sm text-[#b3ab9c] hover:text-[#f5f2ec] transition">
               Pricing
             </Link>
           </div>

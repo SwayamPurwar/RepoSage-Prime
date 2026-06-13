@@ -105,21 +105,42 @@ export default function PricingPage() {
           </p>
 
           <div className="mt-10 inline-flex items-center gap-3 rounded-full border border-[rgba(255,255,255,0.14)] bg-[rgba(255,255,255,0.04)] px-4 py-2">
-            <span className={`text-xs ${isAnnual ? 'text-[#b3ab9c]' : 'text-[#f5f2ec]'}`}>Monthly</span>
-            <button
-              onClick={() => setIsAnnual((value) => !value)}
-              className="relative w-14 h-7 rounded-full bg-[rgba(255,255,255,0.14)] p-1"
-              aria-label="Toggle annual billing"
-            >
-              <span
-                className={`absolute top-1 h-5 w-5 rounded-full bg-[#d7b47f] transition-transform ${isAnnual ? 'translate-x-7' : 'translate-x-0'}`}
-              />
-            </button>
-            <span className={`text-xs ${isAnnual ? 'text-[#f5f2ec]' : 'text-[#b3ab9c]'}`}>Annual</span>
-            <span className="ml-1 text-[10px] uppercase tracking-[0.14em] rounded-full bg-[rgba(215,180,127,0.16)] border border-[rgba(215,180,127,0.3)] px-2 py-1 text-[#f2ddbd]">
-              Save 35%
-            </span>
-          </div>
+  {/* 1. Make the Monthly label clickable */}
+  <button
+    type="button"
+    onClick={() => setIsAnnual(false)}
+    className={`text-xs transition-colors ${!isAnnual ? 'text-[#f5f2ec]' : 'text-[#b3ab9c] hover:text-[#d6cebf]'}`}
+  >
+    Monthly
+  </button>
+
+  {/* 2. Fix the switch alignment using inline-flex and remove absolute positioning */}
+  <button
+    type="button"
+    onClick={() => setIsAnnual((value) => !value)}
+    className="relative inline-flex w-14 h-7 items-center rounded-full bg-[rgba(255,255,255,0.14)] px-1"
+    aria-label="Toggle annual billing"
+  >
+    <span
+      className={`inline-block h-5 w-5 transform rounded-full bg-[#d7b47f] transition-transform duration-200 ease-in-out ${
+        isAnnual ? 'translate-x-7' : 'translate-x-0'
+      }`}
+    />
+  </button>
+
+  {/* 3. Make the Annual label clickable */}
+  <button
+    type="button"
+    onClick={() => setIsAnnual(true)}
+    className={`text-xs transition-colors ${isAnnual ? 'text-[#f5f2ec]' : 'text-[#b3ab9c] hover:text-[#d6cebf]'}`}
+  >
+    Annual
+  </button>
+  
+  <span className="ml-1 text-[10px] uppercase tracking-[0.14em] rounded-full bg-[rgba(215,180,127,0.16)] border border-[rgba(215,180,127,0.3)] px-2 py-1 text-[#f2ddbd]">
+    Save 35%
+  </span>
+</div>
         </header>
 
         <section className="grid grid-cols-1 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
